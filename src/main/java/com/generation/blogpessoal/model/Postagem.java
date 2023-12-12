@@ -23,7 +23,7 @@ public class Postagem {
 	
 	@Column(length = 100)
 	@NotBlank(message = "O título é obrigatório!")
-	@Size(min =5, max = 100, message = "O título deve conter no mínimo 5 caracteres e no máximo 100!")
+	@Size(min = 5, max = 100, message = "O título deve conter no mínimo 5 caracteres e no máximo 100!")
 	private String titulo;
 	
 	@Column(length = 1000)

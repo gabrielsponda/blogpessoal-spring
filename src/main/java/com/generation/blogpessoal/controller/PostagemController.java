@@ -81,7 +81,7 @@ public class PostagemController {
 		if(postagem.isEmpty())
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		
-		postagemRepository.deleteById(id); // SELECT * FROM tb_postagens WHERE id = ?;
+		postagemRepository.deleteById(id); // DELETE FROM tb_postagens WHERE id = ?;
 	}
 
 }
