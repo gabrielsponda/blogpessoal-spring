@@ -111,13 +111,13 @@ public class UsuarioControllerTest {
         usuarioLogin.setSenha("rootroot");
 
         // Corpo da requisição
-        HttpEntity<UsuarioLogin> corpoRequisicao = new HttpEntity<>(usuarioLogin);
+        HttpEntity<UsuarioLogin> corpoRequisicao = new HttpEntity<UsuarioLogin>(usuarioLogin);
      
         // Requisição HTTP
-        ResponseEntity<String> resposta = testRestTemplate
-                .postForEntity("/usuarios/logar", corpoRequisicao, String.class);
+        ResponseEntity<Usuario> corpoResposta = testRestTemplate
+                .exchange("/usuarios/logar", HttpMethod.POST, corpoRequisicao, Usuario.class);
 
-        assertEquals(HttpStatus.OK, resposta.getStatusCode());
+        assertEquals(HttpStatus.OK, corpoResposta.getStatusCode());
     }
     
 	@Test
