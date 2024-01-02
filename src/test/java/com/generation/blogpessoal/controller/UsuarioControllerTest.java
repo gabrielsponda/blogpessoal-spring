@@ -114,8 +114,8 @@ public class UsuarioControllerTest {
         HttpEntity<UsuarioLogin> corpoRequisicao = new HttpEntity<UsuarioLogin>(usuarioLogin);
      
         // Requisição HTTP
-        ResponseEntity<Usuario> corpoResposta = testRestTemplate
-                .exchange("/usuarios/logar", HttpMethod.POST, corpoRequisicao, Usuario.class);
+        ResponseEntity<UsuarioLogin> corpoResposta = testRestTemplate
+                .exchange("/usuarios/logar", HttpMethod.POST, corpoRequisicao, UsuarioLogin.class);
 
         assertEquals(HttpStatus.OK, corpoResposta.getStatusCode());
     }
