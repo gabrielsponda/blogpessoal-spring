@@ -60,8 +60,8 @@ public class UsuarioService {
 			if ((usuarioBuscado.isPresent()) && (usuarioBuscado.get().getId() != usuario.getId()))
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuário já existe!", null);
 			
-			if (usuario.getFoto().isEmpty())
-				usuario.setFoto("[URL da foto padrão]");
+			if (usuario.getFoto().isBlank())
+				usuario.setFoto("https://s2-techtudo.glbimg.com/VJTXyKZH2dW85IkVdBzGZYhNhl4=/0x0:1514x917/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/h/w/Abq4oBSySsO0xmGnkDlg/discord.jpg");
 
 			usuario.setSenha(criptografarSenha(usuario.getSenha()));
 
