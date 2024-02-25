@@ -16,7 +16,7 @@ Este repositório contém o backend do Blog Pessoal, uma aplicação web desenvo
 - **Java Spring**: Para o backend, incluindo Spring Security para autenticação e autorização.
 - **MySQL**: Banco de dados utilizado para armazenar os dados da aplicação.
 - **Insomnia**: Utilizado para testar as APIs desenvolvidas antes de integrar com o frontend.
-- **Deploy no Render**: A aplicação backend está hospedada no Render e pode ser acessada através do link [https://educajunto.onrender.com/](https://educajunto.onrender.com/).
+- **Deploy no Render**: A aplicação backend está hospedada no Render e pode ser acessada através do link [https://blogpessoal-hfqw.onrender.com/](https://blogpessoal-hfqw.onrender.com/).
 
 ## Frontend
 
